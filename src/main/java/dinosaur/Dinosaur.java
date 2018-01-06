@@ -18,8 +18,8 @@ import lombok.Data;
 public abstract class Dinosaur {
     private String name;
     private int age;
-    private int height;
-    private int weight;
+    private int height; // meter
+    private int weight; // tons
 
     protected Dinosaur() {
     }
