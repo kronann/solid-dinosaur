@@ -1,0 +1,36 @@
+{
+  "dinosaurs": [
+    "java.util.ArrayList",
+    [
+      {
+        "@type": "Mosasaure",
+        "name": "Mosa",
+        "age": 25,
+        "height": 20,
+        "weight": 20
+      },
+      {
+        "@type": "Pterodactyl",
+        "name": "Ptéro",
+        "age": 20,
+        "height": 20,
+        "weight": 20,
+        "wingsWide":6
+      },
+      {
+        "@type": "Triceratops",
+        "name": "Tricé",
+        "age": 50,
+        "height": 20,
+        "weight": 20
+      },
+      {
+        "@type": "Velociraptor",
+        "name": "Velo",
+        "age": 15,
+        "height": 20,
+        "weight": 20
+      }
+    ]
+  ]
+}
