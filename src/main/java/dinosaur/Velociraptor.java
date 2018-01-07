@@ -13,4 +13,9 @@ public class Velociraptor extends Dinosaur {
     public String toString() {
         return "Velociraptor - " + super.toString();
     }
+
+    @Override
+    public void fly() {
+        System.out.println("I can't fly :'(");
+    }
 }

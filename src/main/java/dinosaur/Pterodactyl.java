@@ -21,4 +21,9 @@ public class Pterodactyl extends Dinosaur {
         return "Pterodactyl - " + super.toString() +
                 ", wingsWide='" + wingsWide + '\'';
     }
+
+    @Override
+    public void fly() {
+        System.out.println("Pterodactyl.fly");
+    }
 }

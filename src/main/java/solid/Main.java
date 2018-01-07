@@ -24,6 +24,7 @@ public class Main {
                 .collect(Collectors.toList()));
 
         displayDinosaur.display(dinosaur);
+        displayDinosaur.displayRaw(dinosaur);
     }
 
 }

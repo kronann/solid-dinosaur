@@ -13,4 +13,9 @@ public class Triceratops extends Dinosaur {
     public String toString() {
         return "Triceratops - " + super.toString();
     }
+
+    @Override
+    public void fly() {
+        System.out.println("I can't fly :'(");
+    }
 }

@@ -28,4 +28,14 @@ public class DisplayDinosaur {
         }
     }
 
+    public void displayRaw(List<Dinosaur> dinosaurs) {
+        System.out.print("Dinos : " );
+        dinosaurs.forEach(System.out::println);
+    }
+
+    public void displayRaw(Dinosaur dinosaur) {
+        System.out.print("Lonesome Dino : " + dinosaur);
+     }
+
+
 }

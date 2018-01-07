@@ -15,7 +15,7 @@ import lombok.Data;
 }
 )
 @Data
-public abstract class Dinosaur {
+public abstract class Dinosaur implements DinosaurStuff {
     private String name;
     private int age;
     private int height; // meter
@@ -32,6 +32,16 @@ public abstract class Dinosaur {
     }
 
     @Override
+    public void eat() {
+        System.out.println("Dinosaur.eat");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Dinosaur.run");
+    }
+
+    @Override
     public String toString() {
         return
                 "name='" + name + '\'' +
@@ -39,4 +49,6 @@ public abstract class Dinosaur {
                         ", height='" + height + '\'' +
                         ", weight='" + weight + '\'';
     }
+
+
 }
