@@ -26,4 +26,5 @@ public class Pterodactyl extends Dinosaur {
     public void fly() {
         System.out.println("Pterodactyl.fly");
     }
+
 }

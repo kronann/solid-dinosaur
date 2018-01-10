@@ -6,6 +6,7 @@ import dinosaur.Dinosaur;
 
 import java.util.List;
 
+// S
 public class DisplayDinosaur {
 
     public void display(List<Dinosaur> dinosaurs) {

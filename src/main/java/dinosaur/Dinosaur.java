@@ -11,7 +11,7 @@ import lombok.Data;
         @JsonSubTypes.Type(value = Mosasaure.class, name = "Mosasaure"),
         @JsonSubTypes.Type(value = Pterodactyl.class, name = "Pterodactyl"),
         @JsonSubTypes.Type(value = Triceratops.class, name = "Triceratops"),
-        @JsonSubTypes.Type(value = Velociraptor.class, name = "Velociraptor"),
+        @JsonSubTypes.Type(value = Stegosaur.class, name = "Stegosaur"),
 }
 )
 @Data
@@ -31,9 +31,8 @@ public abstract class Dinosaur implements DinosaurStuff {
         this.weight = weight;
     }
 
-    @Override
-    public void eat() {
-        System.out.println("Dinosaur.eat");
+    public void eatMeat() {
+        System.out.println("Dinosaur.eatMeat");
     }
 
     @Override
