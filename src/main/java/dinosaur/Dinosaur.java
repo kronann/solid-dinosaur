@@ -37,7 +37,7 @@ public abstract class Dinosaur implements DinosaurStuff {
 
     @Override
     public void run() {
-        System.out.println("Dinosaur.run");
+        System.out.println(getName() + " run");
     }
 
     @Override

@@ -1,30 +1,32 @@
 package solid;
 
 import dinosaur.Dinosaur;
+import dinosaur.FoodEnum;
+import park.Keeper;
 import park.Park;
 import utils.DisplayDinosaur;
-import utils.ResourceLoader;
 
 import java.io.IOException;
-import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        DisplayDinosaur dinosaurs = new DisplayDinosaur();
 
-        ResourceLoader resourceLoader = new ResourceLoader();
-        Park dinosaurPark = resourceLoader.getDinosaurParkFromJson("dinosaurs-park.json");
-        Dinosaur dinosaur = resourceLoader.getDinosaurFromJson("dinosaur.json");
+        dinosaurs.displayFromJson();
+        dinosaurs.displayFromJsonPretty();
 
-        DisplayDinosaur displayDinosaur = new DisplayDinosaur();
-        displayDinosaur.display(dinosaurPark.getDinosaurs());
+        Keeper keeper = new Keeper();
+        Park park = dinosaurs.getPark();
+        keeper.feedDinosaur(park.getDinosaurs(), FoodEnum.GRASS);
+        System.out.println();
 
-        displayDinosaur.display(dinosaurPark.getDinosaurs().stream()
-                .filter(d -> d.getAge() < 25)
-                .collect(Collectors.toList()));
+        Dinosaur dino = dinosaurs.getPark().getDinosaurs().get(0);
+        dinosaurs.display(dino);
+        dino.run();
 
-        displayDinosaur.display(dinosaur);
-        displayDinosaur.displayRaw(dinosaur);
+//        dino.eatMeat();
+//        dino.fly();
     }
 
 }
