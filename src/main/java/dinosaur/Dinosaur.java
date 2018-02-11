@@ -32,7 +32,7 @@ public abstract class Dinosaur implements DinosaurStuff {
     }
 
     public void eatMeat() {
-        System.out.println("Dinosaur.eatMeat");
+        System.out.println(getName() + " eatMeat");
     }
 
     @Override
