@@ -1,19 +1,27 @@
 package solid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import park.Keeper;
 import park.Park;
+import park.ParkManager;
 import utils.DisplayDinosaur;
-import utils.ResourceLoader;
 
-import java.io.IOException;
+@SpringBootApplication
+public class Main implements CommandLineRunner {
 
-public class Main {
-    static Park dinosaursPark;
+    @Autowired
+    ParkManager parkManager;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
 
-        ResourceLoader resourceLoader = new ResourceLoader();
-        dinosaursPark = resourceLoader.getDinosaursParkFromJson("dinosaurs-park.json");
+    @Override
+    public void run(String... args) {
+        Park dinosaursPark = parkManager.getDinosaursPark();
 
         DisplayDinosaur displayDinosaur = new DisplayDinosaur();
         displayDinosaur.displayPretty(dinosaursPark.getDinosaurs());
@@ -21,5 +29,4 @@ public class Main {
         Keeper keeper = new Keeper();
         keeper.trainDinosaurs(dinosaursPark.getDinosaurs());
     }
-
 }

@@ -1,12 +1,12 @@
 package utils;
 
-import dinosaur.*;
+import dinosaur.Dinosaur;
+import dinosaur.Stegosaur;
 import org.junit.Test;
 import park.Park;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.Arrays;
 
 import static org.junit.Assert.assertTrue;
 
@@ -30,7 +30,7 @@ public class DisplayDinosaurTest {
 
     @Test
     public void should_display_dinosaurs() throws Exception {
-        Park park = buildPark();
+        Park park = new JSONLoader().loadPark();
 
         try (ByteArrayOutputStream outContent = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(outContent));
@@ -39,21 +39,7 @@ public class DisplayDinosaurTest {
             displayDinosaur.displayPretty(park.getDinosaurs());
 
             assertTrue(outContent.toString().contains("Mosa"));
-            assertTrue(outContent.toString().contains("Vélo"));
+            assertTrue(outContent.toString().contains("Ptéro"));
         }
     }
-
-
-    private Park buildPark() {
-        Dinosaur mosasaure = new Mosasaure("Mosa", 25, 20, 20);
-        Dinosaur pterodactyl = new Pterodactyl("Ptéro", 20, 3, 1, 5);
-        Dinosaur triceratops = new Triceratops("Tricé", 50, 5, 15);
-        Dinosaur velociraptor = new Stegosaur("Vélo", 15, 2, 1);
-
-        Park park = new Park();
-        park.setDinosaurs(Arrays.asList(mosasaure, pterodactyl, triceratops, velociraptor));
-
-        return park;
-    }
-
 }
