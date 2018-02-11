@@ -1,61 +1,43 @@
 package utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dinosaur.Dinosaur;
-import lombok.Data;
-import park.Park;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
-import java.util.function.Predicate;
 
-@Data
-public class DisplayDinosaur {
-    private Park park;
-    private static final String DINOSAURS_FILE_JSON = "dinosaurs-park.json";
-    private ObjectMapper mapper = new ObjectMapper();
+// S - OK
+public class DisplayDinosaur implements Display {
 
-    public DisplayDinosaur() {
-        mapper.enableDefaultTyping();
+    @Override
+    public void displayPretty(List<Dinosaur> dinosaurs) {
+        System.out.print("Dinos : ");
+        formatDisplay(dinosaurs);
     }
 
-    public void display(List<Dinosaur> dinosaurs) {
-        dinosaurs.forEach(this::display);
+    @Override
+    public void displayRaw(List<Dinosaur> dinosaurs) {
+        System.out.print("Dinos : ");
+        dinosaurs.forEach(System.out::println);
     }
 
-    public void display(List<Dinosaur> dinosaurs, Predicate<Dinosaur> predicate) {
-        dinosaurs.stream().filter(predicate).forEach(this::display);
+    public void displayRaw(Dinosaur dinosaur) {
+        System.out.print("Lonesome Dino : " + dinosaur);
+        System.out.println();
     }
 
-    public void display(Dinosaur dinosaur) {
-        System.out.println("Lonesome dinosaur... " + dinosaur);
+    public void displayPretty(Dinosaur dinosaur) {
+        System.out.print("Lonesome Dino : ");
+        formatDisplay(dinosaur);
     }
 
-    public void displayFromJson() throws IOException {
-        System.out.println("displayFromJson -> ");
-
-        park = mapper.readValue(this.getClass().getClassLoader().getResourceAsStream(DINOSAURS_FILE_JSON), Park.class);
-        String json = mapper.writeValueAsString(park);
-        System.out.println(json);
-    }
-
-    public void displayFromJsonPretty() throws IOException {
-        System.out.println("displayFromJsonPretty -> ");
-
-        park = mapper.readValue(this.getClass().getClassLoader().getResourceAsStream(DINOSAURS_FILE_JSON), Park.class);
-        String jsonPretty = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(park);
-        System.out.println(jsonPretty);
-    }
-
-    public Dinosaur readFromInputStream(String file) throws IOException {
-        InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(file);
-
-        Dinosaur dinosaur = mapper.readValue(inputStream, Dinosaur.class);
-        park.addDinosaur(dinosaur);
-        String dino = mapper.writeValueAsString(dinosaur);
-        System.out.println("From input stream - " + dino);
-
-        return dinosaur;
+    private void formatDisplay(Object object) {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(object));
+            System.out.println();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
     }
 }

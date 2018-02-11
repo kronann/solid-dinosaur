@@ -1,5 +1,5 @@
 package dinosaur;
 
-public enum FoodEnum {
+public enum FoodType {
     MEAT, GRASS
 }

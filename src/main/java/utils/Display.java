@@ -5,6 +5,6 @@ import dinosaur.Dinosaur;
 import java.util.List;
 
 public interface Display {
-    void display(List<Dinosaur> dinosaurs);
-    void display(Dinosaur dinosaur);
+    void displayPretty(List<Dinosaur> dinosaurs);
+    void displayRaw(List<Dinosaur> dinosaurs);
 }

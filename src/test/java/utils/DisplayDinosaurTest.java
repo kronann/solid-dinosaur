@@ -22,7 +22,7 @@ public class DisplayDinosaurTest {
             System.setOut(new PrintStream(outContent));
 
             DisplayDinosaur displayDinosaur = new DisplayDinosaur();
-            displayDinosaur.display(velociraptor);
+            displayDinosaur.displayRaw(velociraptor);
 
             assertTrue(outContent.toString().contains("Vélo"));
         }
@@ -36,7 +36,7 @@ public class DisplayDinosaurTest {
             System.setOut(new PrintStream(outContent));
 
             DisplayDinosaur displayDinosaur = new DisplayDinosaur();
-            displayDinosaur.display(park.getDinosaurs());
+            displayDinosaur.displayPretty(park.getDinosaurs());
 
             assertTrue(outContent.toString().contains("Mosa"));
             assertTrue(outContent.toString().contains("Vélo"));

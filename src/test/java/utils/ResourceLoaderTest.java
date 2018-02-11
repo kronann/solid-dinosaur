@@ -12,7 +12,7 @@ public class ResourceLoaderTest {
     public void should_getDinosaurParkFromJson() throws Exception {
         String fileName = "dinosaurs-park.json";
         ResourceLoader resourceLoader = new ResourceLoader();
-        Park park = resourceLoader.getDinosaurParkFromJson(fileName);
+        Park park = resourceLoader.getDinosaursParkFromJson(fileName);
 
         assertTrue(park.getDinosaurs().size() > 1);
     }
