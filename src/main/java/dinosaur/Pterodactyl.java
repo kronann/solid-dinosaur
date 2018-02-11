@@ -34,7 +34,7 @@ public class Pterodactyl extends Dinosaur {
 
     @Override
     public void swim() {
-        System.out.println("I can't swim :'(");
+        System.out.println(getName() + " can't swim :'(");
 
     }
 

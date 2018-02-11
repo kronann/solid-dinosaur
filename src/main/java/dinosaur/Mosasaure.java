@@ -22,12 +22,11 @@ public class Mosasaure extends Dinosaur {
     // LI
     @Override
     public void fly() {
-        System.out.println("I can't fly :'(");
+        System.out.println(getName() + " can't fly :'(");
     }
 
     @Override
     public void swim() {
         System.out.println("Mosasaure.swim");
     }
-
 }

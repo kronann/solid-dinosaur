@@ -5,7 +5,7 @@ public interface DinosaurStuff {
     void run();
     void talk();
 
-    // I
+    // LI
     void fly();
     void swim();
 }

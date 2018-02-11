@@ -1,8 +1,7 @@
 package park;
 
 import dinosaur.Dinosaur;
-import dinosaur.Stegosaur;
-import dinosaur.Triceratops;
+import dinosaur.TrainingExercice;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -19,4 +18,24 @@ public class Keeper {
             dinosaur.eat();
         }
     }
+
+    public void trainDinosaurs(List<Dinosaur> dinosaurs, TrainingExercice trainingExercice) {
+        for (Dinosaur dinosaur : dinosaurs) {
+            switch (trainingExercice) {
+                case RUN:
+                    dinosaur.run();
+                    break;
+                case SWIM:
+                    dinosaur.swim();
+                    break;
+                case FLY:
+                    dinosaur.fly();
+                    break;
+                default:
+                    dinosaur.talk();
+                    break;
+            }
+        }
+    }
+
 }

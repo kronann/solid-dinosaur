@@ -4,7 +4,7 @@ import exception.FlyableException;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class Triceratops extends Dinosaur {
+public class Triceratops extends Dinosaur implements SwimmingDinosaur {
 
     public Triceratops(String name, int age, int height, int weight) {
         super(name, age, height, weight);
@@ -19,7 +19,7 @@ public class Triceratops extends Dinosaur {
     @Override
     public void fly() {
         try {
-            throw new FlyableException("I can't fly :'(");
+            throw new FlyableException(getName() + " can't fly :'(");
         } catch (FlyableException e) {
             e.printStackTrace();
         }
@@ -28,7 +28,7 @@ public class Triceratops extends Dinosaur {
     // LI
     @Override
     public void swim() {
-        System.out.println("I can't swim :'(  but....");
+        System.out.print(getName() + " can't swim :'(  but....");
         run();
     }
 

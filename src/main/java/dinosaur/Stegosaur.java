@@ -16,12 +16,12 @@ public class Stegosaur extends Dinosaur {
 
     @Override
     public void fly() {
-        System.out.println("I can't fly :'(");
+        System.out.println(getName() + " can't fly :'(");
     }
 
     @Override
     public void swim() {
-        System.out.println("I can't swim :'(");
+        System.out.println(getName() + " can't swim :'(");
 
     }
 

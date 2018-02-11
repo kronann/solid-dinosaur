@@ -1,6 +1,7 @@
 package solid;
 
 import dinosaur.Dinosaur;
+import dinosaur.TrainingExercice;
 import park.Keeper;
 import park.Park;
 import utils.DisplayDinosaur;
@@ -9,28 +10,26 @@ import utils.ResourceLoader;
 import java.io.IOException;
 
 public class Main {
+    static Park dinosaursPark;
 
     public static void main(String[] args) throws IOException {
 
         ResourceLoader resourceLoader = new ResourceLoader();
-        Park dinosaursPark = resourceLoader.getDinosaursParkFromJson("dinosaurs-park.json");
-        Dinosaur dinosaur = resourceLoader.getDinosaurFromJson("dinosaur.json");
-        Dinosaur dinosaurFromIS = resourceLoader.readFromInputStream("dinosaur-rella.json");
+        dinosaursPark = resourceLoader.getDinosaursParkFromJson("dinosaurs-park.json");
 
         DisplayDinosaur displayDinosaur = new DisplayDinosaur();
-        displayDinosaur.displayRaw(dinosaursPark.getDinosaurs());
         displayDinosaur.displayPretty(dinosaursPark.getDinosaurs());
 
-        displayDinosaur.displayRaw(dinosaur);
-
-        displayDinosaur.displayPretty(dinosaurFromIS);
-        dinosaurFromIS.run();
-        System.out.println();
-
         Keeper keeper = new Keeper();
-        keeper.feedDinosaur(dinosaursPark.getDinosaurs());
+        keeper.trainDinosaurs(dinosaursPark.getDinosaurs(), TrainingExercice.RUN);
 
-        //dinosaurFromIS.fly();
     }
 
+    static Dinosaur getMosa(){
+        return dinosaursPark.getDinosaurs().get(0);
+    }
+
+    static Dinosaur getTricé(){
+        return dinosaursPark.getDinosaurs().get(2);
+    }
 }
