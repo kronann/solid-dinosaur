@@ -1,6 +1,7 @@
 package solid;
 
 import dinosaur.Dinosaur;
+import dinosaur.FoodType;
 import park.Keeper;
 import park.Park;
 import utils.DisplayDinosaur;

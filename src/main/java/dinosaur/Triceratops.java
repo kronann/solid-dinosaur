@@ -27,7 +27,7 @@ public class Triceratops extends Dinosaur {
 
     @Override
     public void swim() {
-        System.out.println("I can't swim :'(  but....");
+        System.out.println("I can't swim :'(  but...." );
         run();
     }
 

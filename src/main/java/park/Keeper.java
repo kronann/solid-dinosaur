@@ -11,18 +11,12 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class Keeper {
-    // OI
+    // O
     public void feedDinosaur(List<Dinosaur> dinosaurs) {
         System.out.println("Keeper.feedDinosaur");
 
         for (Dinosaur dinosaur : dinosaurs) {
-            if (dinosaur instanceof Triceratops) {
-                ((Triceratops) dinosaur).eatGrass();
-            } else if (dinosaur instanceof Stegosaur) {
-                ((Stegosaur) dinosaur).eatGrass();
-            } else {
-                dinosaur.eatMeat();
-            }
+            dinosaur.eat();
         }
     }
 }

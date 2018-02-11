@@ -23,6 +23,11 @@ public class Pterodactyl extends Dinosaur {
     }
 
     @Override
+    public void eat() {
+        System.out.println("Pterodactyl.eatMeat");
+    }
+
+    @Override
     public void fly() {
         System.out.println("Pterodactyl.fly");
     }
