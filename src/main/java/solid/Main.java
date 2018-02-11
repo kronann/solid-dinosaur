@@ -18,7 +18,7 @@ public class Main {
 
         Keeper keeper = new Keeper();
         Park park = dinosaurs.getPark();
-        keeper.feedDinosaur(park.getDinosaurs(), FoodEnum.GRASS);
+        keeper.feedDinosaur(park.getDinosaurs());
         System.out.println();
 
         dinosaurs.readFromInputStream("dinosaur-rella.json");
@@ -27,9 +27,6 @@ public class Main {
         Dinosaur dino = dinosaurs.getPark().getDinosaurs().get(0);
         dinosaurs.display(dino);
         dino.run();
-
-//        dino.eatMeat();
-//        dino.fly();
     }
 
 }
