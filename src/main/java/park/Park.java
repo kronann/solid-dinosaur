@@ -11,4 +11,8 @@ import java.util.List;
 @Data
 public class Park {
     private List<Dinosaur> dinosaurs = new ArrayList<>();
+
+    public boolean addDinosaur(Dinosaur dinosaur){
+        return dinosaurs.add(dinosaur);
+    }
 }

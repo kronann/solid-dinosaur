@@ -5,13 +5,10 @@ import dinosaur.Dinosaur;
 import lombok.Data;
 import park.Park;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 @Data
 public class DisplayDinosaur {
@@ -51,25 +48,14 @@ public class DisplayDinosaur {
         System.out.println(jsonPretty);
     }
 
-//
-//    public void displayFlyingDinosaur(Park dinosaurPark) {
-//
-//         display(dinosaurPark.getDinosaurs());
-//
-//        display(dinosaurPark.getDinosaurs().stream()
-//                .filter(d -> d.getAge() < 25)
-//                .collect(Collectors.toList()));
-//    }
+    public Dinosaur readFromInputStream(String file) throws IOException {
+        InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(file);
 
-    private String readFromInputStream(InputStream inputStream) throws IOException {
-        StringBuilder resultStringBuilder = new StringBuilder();
+        Dinosaur dinosaur = mapper.readValue(inputStream, Dinosaur.class);
+        park.addDinosaur(dinosaur);
+        String dino = mapper.writeValueAsString(dinosaur);
+        System.out.println("From input stream - " + dino);
 
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                resultStringBuilder.append(line).append("\n");
-            }
-        }
-        return resultStringBuilder.toString();
+        return dinosaur;
     }
 }

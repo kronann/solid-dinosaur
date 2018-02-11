@@ -20,4 +20,9 @@ public class Mosasaure extends Dinosaur {
         System.out.println("I can't fly :'(");
     }
 
+    @Override
+    public void swim() {
+        System.out.println("Mosasaure.swim");
+    }
+
 }

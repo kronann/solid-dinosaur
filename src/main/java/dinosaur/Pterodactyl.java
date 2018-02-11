@@ -27,4 +27,10 @@ public class Pterodactyl extends Dinosaur {
         System.out.println("Pterodactyl.fly");
     }
 
+    @Override
+    public void swim() {
+        System.out.println("I can't swim :'(");
+
+    }
+
 }

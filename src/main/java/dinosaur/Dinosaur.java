@@ -41,6 +41,11 @@ public abstract class Dinosaur implements DinosaurStuff {
     }
 
     @Override
+    public void talk() {
+        System.out.println(getName() + " talk");
+    }
+
+    @Override
     public String toString() {
         return
                 "name='" + name + '\'' +
@@ -48,6 +53,4 @@ public abstract class Dinosaur implements DinosaurStuff {
                         ", height='" + height + '\'' +
                         ", weight='" + weight + '\'';
     }
-
-
 }

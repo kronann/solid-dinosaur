@@ -21,6 +21,9 @@ public class Main {
         keeper.feedDinosaur(park.getDinosaurs(), FoodEnum.GRASS);
         System.out.println();
 
+        dinosaurs.readFromInputStream("dinosaur-rella.json");
+        System.out.println();
+
         Dinosaur dino = dinosaurs.getPark().getDinosaurs().get(0);
         dinosaurs.display(dino);
         dino.run();
