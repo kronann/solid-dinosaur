@@ -14,6 +14,11 @@ public class Mosasaure extends Dinosaur {
         return "Mosasaure - " + super.toString();
     }
 
+    @Override
+    public void eat() {
+        System.out.println("Mosasaure.eatMeat");
+    }
+
     // LI
     @Override
     public void fly() {

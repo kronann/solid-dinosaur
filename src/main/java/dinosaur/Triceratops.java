@@ -25,13 +25,14 @@ public class Triceratops extends Dinosaur {
         }
     }
 
+    // LI
     @Override
     public void swim() {
-        System.out.println("I can't swim :'(  but...." );
+        System.out.println("I can't swim :'(  but....");
         run();
     }
 
-    public void eatGrass() {
+    public void eat() {
         System.out.println("Triceratops.eatGrass");
     }
 }

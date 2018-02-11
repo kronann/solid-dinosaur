@@ -1,9 +1,11 @@
 package dinosaur;
 
 public interface DinosaurStuff {
+    void eat();
     void run();
     void talk();
-    // L
+
+    // I
     void fly();
     void swim();
 }

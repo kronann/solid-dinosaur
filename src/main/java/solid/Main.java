@@ -1,7 +1,6 @@
 package solid;
 
 import dinosaur.Dinosaur;
-import dinosaur.FoodType;
 import park.Keeper;
 import park.Park;
 import utils.DisplayDinosaur;
@@ -31,7 +30,7 @@ public class Main {
         Keeper keeper = new Keeper();
         keeper.feedDinosaur(dinosaursPark.getDinosaurs());
 
-//        dinosaurFromIS.fly();
+        //dinosaurFromIS.fly();
     }
 
 }

@@ -31,10 +31,6 @@ public abstract class Dinosaur implements DinosaurStuff {
         this.weight = weight;
     }
 
-    public void eatMeat() {
-        System.out.println("Dinosaur.eatMeat");
-    }
-
     @Override
     public void run() {
         System.out.println(getName() + " run");
