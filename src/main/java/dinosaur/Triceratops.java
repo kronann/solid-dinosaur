@@ -4,7 +4,7 @@ import exception.FlyableException;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class Triceratops extends Dinosaur implements SwimmingDinosaur {
+public class Triceratops extends Dinosaur {
 
     public Triceratops(String name, int age, int height, int weight) {
         super(name, age, height, weight);

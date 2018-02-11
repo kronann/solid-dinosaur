@@ -13,7 +13,6 @@ public class Keeper {
     // O
     public void feedDinosaur(List<Dinosaur> dinosaurs) {
         System.out.println("Keeper.feedDinosaur");
-
         for (Dinosaur dinosaur : dinosaurs) {
             dinosaur.eat();
         }
