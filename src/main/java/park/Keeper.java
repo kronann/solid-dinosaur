@@ -1,7 +1,6 @@
 package park;
 
 import dinosaur.Dinosaur;
-import dinosaur.TrainingExercice;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -19,23 +18,10 @@ public class Keeper {
         }
     }
 
-    public void trainDinosaurs(List<Dinosaur> dinosaurs, TrainingExercice trainingExercice) {
+    public void trainDinosaurs(List<Dinosaur> dinosaurs) {
+        System.out.println("Keeper.trainDinosaurs - ");
         for (Dinosaur dinosaur : dinosaurs) {
-            switch (trainingExercice) {
-                case RUN:
-                    dinosaur.run();
-                    break;
-                case SWIM:
-                    dinosaur.swim();
-                    break;
-                case FLY:
-                    dinosaur.fly();
-                    break;
-                default:
-                    dinosaur.talk();
-                    break;
-            }
+            dinosaur.startTraining();
         }
     }
-
 }

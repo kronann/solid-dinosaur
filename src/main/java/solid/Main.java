@@ -1,7 +1,5 @@
 package solid;
 
-import dinosaur.Dinosaur;
-import dinosaur.TrainingExercice;
 import park.Keeper;
 import park.Park;
 import utils.DisplayDinosaur;
@@ -21,15 +19,7 @@ public class Main {
         displayDinosaur.displayPretty(dinosaursPark.getDinosaurs());
 
         Keeper keeper = new Keeper();
-        keeper.trainDinosaurs(dinosaursPark.getDinosaurs(), TrainingExercice.RUN);
-
+        keeper.trainDinosaurs(dinosaursPark.getDinosaurs());
     }
 
-    static Dinosaur getMosa(){
-        return dinosaursPark.getDinosaurs().get(0);
-    }
-
-    static Dinosaur getTricé(){
-        return dinosaursPark.getDinosaurs().get(2);
-    }
 }

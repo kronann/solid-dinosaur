@@ -1,5 +1,7 @@
 package dinosaur;
 
+import api.DinosaurActivity;
+import api.DinosaurStuff;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -15,7 +17,7 @@ import lombok.Data;
 }
 )
 @Data
-public abstract class Dinosaur implements DinosaurStuff {
+public abstract class Dinosaur implements DinosaurStuff, DinosaurActivity {
     private String name;
     private int age;
     private int height; // meter

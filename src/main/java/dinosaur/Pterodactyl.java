@@ -1,11 +1,12 @@
 package dinosaur;
 
+import api.FlyingDinosaur;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
-public class Pterodactyl extends Dinosaur {
+public class Pterodactyl extends Dinosaur implements FlyingDinosaur {
 
     @Getter
     @Setter
@@ -32,10 +33,9 @@ public class Pterodactyl extends Dinosaur {
         System.out.println("Pterodactyl.fly");
     }
 
+
     @Override
-    public void swim() {
-        System.out.println(getName() + " can't swim :'(");
-
+    public void startTraining() {
+        fly();
     }
-
 }

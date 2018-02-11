@@ -1,9 +1,10 @@
 package dinosaur;
 
+import api.SwimmingDinosaur;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class Mosasaure extends Dinosaur {
+public class Mosasaure extends Dinosaur implements SwimmingDinosaur {
 
     public Mosasaure(String name, int age, int height, int weight) {
         super(name, age, height, weight);
@@ -19,14 +20,14 @@ public class Mosasaure extends Dinosaur {
         System.out.println("Mosasaure.eatMeat");
     }
 
-    // LI
-    @Override
-    public void fly() {
-        System.out.println(getName() + " can't fly :'(");
-    }
 
     @Override
     public void swim() {
         System.out.println("Mosasaure.swim");
+    }
+
+    @Override
+    public void startTraining() {
+        swim();
     }
 }

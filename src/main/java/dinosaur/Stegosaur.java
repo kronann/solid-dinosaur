@@ -14,18 +14,12 @@ public class Stegosaur extends Dinosaur {
         return "Stegosaur - " + super.toString();
     }
 
-    @Override
-    public void fly() {
-        System.out.println(getName() + " can't fly :'(");
-    }
-
-    @Override
-    public void swim() {
-        System.out.println(getName() + " can't swim :'(");
-
-    }
-
     public void eat() {
         System.out.println("Stegosaur.eatGrass");
+    }
+
+    @Override
+    public void startTraining() {
+        talk();
     }
 }
