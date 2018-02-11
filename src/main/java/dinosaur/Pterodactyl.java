@@ -25,12 +25,12 @@ public class Pterodactyl extends Dinosaur implements FlyingDinosaur {
 
     @Override
     public void eat() {
-        System.out.println("Pterodactyl.eatMeat");
+        System.out.println(getName() + " eatMeat");
     }
 
     @Override
     public void fly() {
-        System.out.println("Pterodactyl.fly");
+        System.out.println(getName() + " fly");
     }
 
 

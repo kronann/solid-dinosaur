@@ -17,13 +17,13 @@ public class Mosasaure extends Dinosaur implements SwimmingDinosaur {
 
     @Override
     public void eat() {
-        System.out.println("Mosasaure.eatMeat");
+        System.out.println(getName() + " eatMeat");
     }
 
 
     @Override
     public void swim() {
-        System.out.println("Mosasaure.swim");
+        System.out.println(getName() + " swim");
     }
 
     @Override
