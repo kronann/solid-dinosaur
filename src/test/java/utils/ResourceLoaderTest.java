@@ -19,11 +19,11 @@ public class ResourceLoaderTest {
 
     @Test
     public void should_getDinosaurFromJson() throws Exception {
-        String fileName = "dinosaur.json";
+        String fileName = "dinosaur-rella.json";
         ResourceLoader resourceLoader = new ResourceLoader();
         Dinosaur dinosaur = resourceLoader.getDinosaurFromJson(fileName);
 
-        assertTrue("Must be Mosa", dinosaur.getName().equals("Mosa"));
+        assertTrue("Must be Mosa rella", dinosaur.getName().equals("Mosa rella"));
     }
 
 }

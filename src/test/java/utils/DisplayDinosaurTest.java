@@ -16,7 +16,7 @@ public class DisplayDinosaurTest {
     @Test
     public void should_display_dinosaur() throws Exception {
 
-        Dinosaur velociraptor = new Stegosaur("Vélo", 15, 20, 20);
+        Dinosaur velociraptor = new GossipDinosaur("Vélo", 15, 20, 20);
 
         try (ByteArrayOutputStream outContent = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(outContent));
@@ -45,10 +45,10 @@ public class DisplayDinosaurTest {
 
 
     private Park buildPark() {
-        Dinosaur mosasaure = new Mosasaure("Mosa", 25, 20, 20);
-        Dinosaur pterodactyl = new Pterodactyl("Ptéro", 20, 3, 1, 5);
-        Dinosaur triceratops = new Triceratops("Tricé", 50, 5, 15);
-        Dinosaur velociraptor = new Stegosaur("Vélo", 15, 2, 1);
+        Dinosaur mosasaure = new SwimmingDinosaur("Mosa", 25, 20, 20);
+        Dinosaur pterodactyl = new FlyingDinosaur("Ptéro", 20, 3, 1, 5);
+        Dinosaur triceratops = new GossipDinosaur("Tricé", 50, 5, 15);
+        Dinosaur velociraptor = new GossipDinosaur("Vélo", 15, 2, 1);
 
         Park park = new Park();
         park.setDinosaurs(Arrays.asList(mosasaure, pterodactyl, triceratops, velociraptor));

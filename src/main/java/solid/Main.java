@@ -12,6 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
+        // Source de données
         ResourceLoader resourceLoader = new ResourceLoader();
         dinosaursPark = resourceLoader.getDinosaursParkFromJson("dinosaurs-park.json");
 
@@ -19,6 +20,7 @@ public class Main {
         displayDinosaur.displayPretty(dinosaursPark.getDinosaurs());
 
         Keeper keeper = new Keeper();
+        keeper.feedDinosaur(dinosaursPark.getDinosaurs());
         keeper.trainDinosaurs(dinosaursPark.getDinosaurs());
     }
 
