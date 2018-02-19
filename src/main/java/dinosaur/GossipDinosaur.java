@@ -15,7 +15,7 @@ public class GossipDinosaur extends Dinosaur {
     }
 
     public void eat() {
-        System.out.println("Stegosaur.eatGrass");
+        System.out.println(getName() + " eatGrass");
     }
 
     @Override

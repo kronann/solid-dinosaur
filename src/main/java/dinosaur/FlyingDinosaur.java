@@ -25,12 +25,12 @@ public class FlyingDinosaur extends Dinosaur implements FlyingSkill {
 
     @Override
     public void eat() {
-        System.out.println("Pterodactyl.eatMeat");
+        System.out.println(getName() + " eatMeat");
     }
 
     @Override
     public void fly() {
-        System.out.println("Pterodactyl.fly");
+        System.out.println(getName() + " fly");
     }
 
 
