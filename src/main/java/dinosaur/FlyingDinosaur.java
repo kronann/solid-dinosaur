@@ -1,18 +1,18 @@
 package dinosaur;
 
-import api.FlyingDinosaur;
+import api.FlyingSkill;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
-public class Pterodactyl extends Dinosaur implements FlyingDinosaur {
+public class FlyingDinosaur extends Dinosaur implements FlyingSkill {
 
     @Getter
     @Setter
     private int wingsWide;
 
-    public Pterodactyl(String name, int age, int height, int weight, int wingsWide) {
+    public FlyingDinosaur(String name, int age, int height, int weight, int wingsWide) {
         super(name, age, height, weight);
         this.wingsWide = wingsWide;
     }

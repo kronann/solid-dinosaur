@@ -1,7 +1,7 @@
 package utils;
 
 import dinosaur.Dinosaur;
-import dinosaur.Stegosaur;
+import dinosaur.GossipDinosaur;
 import org.junit.Test;
 import park.Park;
 
@@ -16,7 +16,7 @@ public class DisplayDinosaurTest {
     @Test
     public void should_display_dinosaur() throws Exception {
 
-        Dinosaur velociraptor = new Stegosaur("Vélo", 15, 20, 20);
+        Dinosaur velociraptor = new GossipDinosaur("Vélo", 15, 20, 20);
 
         try (ByteArrayOutputStream outContent = new ByteArrayOutputStream()) {
             System.setOut(new PrintStream(outContent));

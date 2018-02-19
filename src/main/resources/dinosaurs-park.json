@@ -3,14 +3,14 @@
     "java.util.ArrayList",
     [
       {
-        "@type": "Mosasaure",
+        "@type": "SwimmingDinosaur",
         "name": "Mosa",
         "age": 25,
         "height": 20,
         "weight": 20
       },
       {
-        "@type": "Pterodactyl",
+        "@type": "FlyingDinosaur",
         "name": "Ptéro",
         "age": 20,
         "height": 20,
@@ -18,14 +18,14 @@
         "wingsWide":6
       },
       {
-        "@type": "Triceratops",
+        "@type": "GossipDinosaur",
         "name": "Tricé",
         "age": 50,
         "height": 20,
         "weight": 20
       },
       {
-        "@type": "Stegosaur",
+        "@type": "GossipDinosaur",
         "name": "Stego",
         "age": 15,
         "height": 20,

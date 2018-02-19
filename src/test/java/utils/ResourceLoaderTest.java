@@ -7,7 +7,6 @@ import park.Park;
 
 import static org.junit.Assert.assertTrue;
 
-
 public class ResourceLoaderTest {
 
     private ResourceLoader resourceLoader;
@@ -25,7 +24,7 @@ public class ResourceLoaderTest {
         resourceLoader = new FileLoader();
         Dinosaur dinosaur = resourceLoader.loadDinosaur();
 
-        assertTrue("Must be Mosa", dinosaur.getName().equals("Mosa rella"));
+        assertTrue("Must be Mosa rella", dinosaur.getName().equals("Mosa rella"));
     }
 
 }

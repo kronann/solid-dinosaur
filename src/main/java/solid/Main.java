@@ -27,6 +27,7 @@ public class Main implements CommandLineRunner {
         displayDinosaur.displayPretty(dinosaursPark.getDinosaurs());
 
         Keeper keeper = new Keeper();
+        keeper.feedDinosaur(dinosaursPark.getDinosaurs());
         keeper.trainDinosaurs(dinosaursPark.getDinosaurs());
     }
 }

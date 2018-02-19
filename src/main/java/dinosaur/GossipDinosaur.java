@@ -3,15 +3,15 @@ package dinosaur;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class Stegosaur extends Dinosaur {
+public class GossipDinosaur extends Dinosaur {
 
-    public Stegosaur(String name, int age, int height, int weight) {
+    public GossipDinosaur(String name, int age, int height, int weight) {
         super(name, age, height, weight);
     }
 
     @Override
     public String toString() {
-        return "Stegosaur - " + super.toString();
+        return "GossipDinosaur - " + super.toString();
     }
 
     public void eat() {

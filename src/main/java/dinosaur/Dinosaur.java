@@ -10,10 +10,10 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = Mosasaure.class, name = "Mosasaure"),
-        @JsonSubTypes.Type(value = Pterodactyl.class, name = "Pterodactyl"),
-        @JsonSubTypes.Type(value = Triceratops.class, name = "Triceratops"),
-        @JsonSubTypes.Type(value = Stegosaur.class, name = "Stegosaur"),
+        @JsonSubTypes.Type(value = SwimmingDinosaur.class, name = "SwimmingDinosaur"),
+        @JsonSubTypes.Type(value = FlyingDinosaur.class, name = "FlyingDinosaur"),
+        @JsonSubTypes.Type(value = GossipDinosaur.class, name = "GossipDinosaur"),
+        @JsonSubTypes.Type(value = GossipDinosaur.class, name = "GossipDinosaur"),
 }
 )
 @Data

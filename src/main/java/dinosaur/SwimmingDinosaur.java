@@ -1,12 +1,12 @@
 package dinosaur;
 
-import api.SwimmingDinosaur;
+import api.SwimmingSkill;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class Mosasaure extends Dinosaur implements SwimmingDinosaur {
+public class SwimmingDinosaur extends Dinosaur implements SwimmingSkill {
 
-    public Mosasaure(String name, int age, int height, int weight) {
+    public SwimmingDinosaur(String name, int age, int height, int weight) {
         super(name, age, height, weight);
     }
 
