@@ -5,6 +5,7 @@ public interface DinosaurStuff {
 
     void talk();
 
+    void eat();
     // L
     void fly();
 

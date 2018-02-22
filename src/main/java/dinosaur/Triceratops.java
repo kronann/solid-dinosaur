@@ -31,7 +31,7 @@ public class Triceratops extends Dinosaur {
         run();
     }
 
-    public void eatGrass() {
+    public void eat() {
         System.out.println(getName() + " eatGrass");
     }
 }

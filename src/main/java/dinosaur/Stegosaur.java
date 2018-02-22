@@ -24,7 +24,7 @@ public class Stegosaur extends Dinosaur {
 
     }
 
-    public void eatGrass() {
+    public void eat() {
         System.out.println(getName() + " eatGrass");
     }
 }
