@@ -21,7 +21,7 @@ public class Main {
 
         Keeper keeper = new Keeper();
         keeper.feedDinosaur(dinosaursPark.getDinosaurs());
-
-        // keeper.trainDinosaurs(dinosaursPark.getDinosaurs(), TrainingExercice.RUN);
+        // LISKOV-IS
+        keeper.trainDinosaurs(dinosaursPark.getDinosaurs(), TrainingExercice.RUN);
     }
 }
