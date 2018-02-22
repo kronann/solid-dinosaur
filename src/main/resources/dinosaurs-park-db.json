@@ -1,0 +1,37 @@
+{
+  "dinosaurs": [
+    "java.util.ArrayList",
+    [
+      {
+        "@type": "SwimmingDinosaur",
+        "_class": "dinosaur.SwimmingDinosaur",
+        "name": "Mosa",
+        "age": 25,
+        "height": 20,
+        "weight": 20
+      },
+      {  "@type": "FlyingDinosaur",
+
+        "name": "Ptéro",
+        "age": 20,
+        "height": 20,
+        "weight": 20,
+        "wingsWide":6
+      },
+      {
+        "@type": "GossipDinosaur",
+        "name": "Tricé",
+        "age": 50,
+        "height": 20,
+        "weight": 20
+      },
+      {
+        "@type": "GossipDinosaur",
+        "name": "Stego",
+        "age": 15,
+        "height": 20,
+        "weight": 20
+      }
+    ]
+  ]
+}

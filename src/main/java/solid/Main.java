@@ -29,9 +29,8 @@ public class Main {
         System.out.println();
 
         Keeper keeper = new Keeper();
+        // open/close
         keeper.feedDinosaur(dinosaursPark.getDinosaurs());
-
-//        dinosaurFromIS.fly();
     }
 
 }
