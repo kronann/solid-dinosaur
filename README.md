@@ -1,2 +1,2 @@
 # solid-dinosaur
-SOLID Principles with dinosaur
+SOLID Principles with dinosaur.
